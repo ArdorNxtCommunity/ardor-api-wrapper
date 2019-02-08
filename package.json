@@ -1,0 +1,36 @@
+{
+  "name": "ardorjs",
+  "version": "1.0.0",
+  "description": "NPM package for interaction with ardor node",
+  "main": "index.js",
+  "files": ["lib/**/*"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArdorNxtCommunity/ardorJS.git"
+  },
+  "keywords": [
+    "ardor",
+    "nxt",
+    "blockchain",
+    "decentralization",
+    "web3"
+  ],
+  "author": "ArdorNxtCommunity",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArdorNxtCommunity/ardorJS/issues"
+  },
+  "homepage": "https://github.com/ArdorNxtCommunity/ardorJS#readme",  
+  "devDependencies": {
+    "prettier": "^1.16.4",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.3.3"
+  }
+}
