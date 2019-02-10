@@ -31,6 +31,7 @@
   "homepage": "https://github.com/ArdorNxtCommunity/ardorJS#readme",
   "devDependencies": {
     "@angular/common": "^7.2.4",
+    "@angular/core": "^7.2.4",
     "prettier": "^1.16.4",
     "rxjs": "^6.4.0",
     "tslint": "^5.12.1",
