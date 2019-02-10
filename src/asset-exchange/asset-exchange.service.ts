@@ -9,41 +9,8 @@
 import { Observable } from 'rxjs';
 import { RequestHelper } from '../helpers/requests.helper';
 
-export class Accounts {
+export class AssetExchange {
     
-    public static deleteAccountProperty(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'deleteAccountProperty');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static deleteContractReference(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'deleteContractReference');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static getAccount(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getAccount');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
     public static getAccountAssetCount(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
@@ -55,6 +22,7 @@ export class Accounts {
             {headers: RequestHelper.headers()}
         );
     }
+
     public static getAccountAssets(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
@@ -66,61 +34,7 @@ export class Accounts {
             {headers: RequestHelper.headers()}
         );
     }
-    public static getAccountBlockCount(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getAccountBlockCount');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static getAccountBlockIds(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getAccountBlockIds');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static getAccountBlocks(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getAccountBlocks');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static getAccountCurrencies(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getAccountCurrencies');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static getAccountCurrencyCount(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getAccountCurrencyCount');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
+    
     public static getAccountCurrentAskOrderIds(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
@@ -132,6 +46,7 @@ export class Accounts {
             {headers: RequestHelper.headers()}
         );
     }
+
     public static getAccountCurrentAskOrders(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
@@ -143,6 +58,7 @@ export class Accounts {
             {headers: RequestHelper.headers()}
         );
     }
+
     public static getAccountCurrentBidOrderIds(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
@@ -154,6 +70,7 @@ export class Accounts {
             {headers: RequestHelper.headers()}
         );
     }
+
     public static getAccountCurrentBidOrders(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
@@ -165,10 +82,11 @@ export class Accounts {
             {headers: RequestHelper.headers()}
         );
     }
-    public static getAccountExchangeRequests(params: URLSearchParams): Observable<object>{
+
+    public static getAllAssets(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
-        uri.append('requestType', 'getAccountExchangeRequests');
+        uri.append('requestType', 'getAllAssets');
         // Send the POST request to remote/local node
         return RequestHelper.httpClient().post<object>(
             RequestHelper.apiUrl(), 
@@ -176,10 +94,11 @@ export class Accounts {
             {headers: RequestHelper.headers()}
         );
     }
-    public static getAccountId(params: URLSearchParams): Observable<object>{
+
+    public static getAllOpenAskOrders(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
-        uri.append('requestType', 'getAccountId');
+        uri.append('requestType', 'getAllOpenAskOrders');
         // Send the POST request to remote/local node
         return RequestHelper.httpClient().post<object>(
             RequestHelper.apiUrl(), 
@@ -187,10 +106,11 @@ export class Accounts {
             {headers: RequestHelper.headers()}
         );
     }
-    public static getAccountLedger(params: URLSearchParams): Observable<object>{
+
+    public static getAllOpenBidOrders(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
-        uri.append('requestType', 'getAccountLedger');
+        uri.append('requestType', 'getAllOpenBidOrders');
         // Send the POST request to remote/local node
         return RequestHelper.httpClient().post<object>(
             RequestHelper.apiUrl(), 
@@ -198,10 +118,11 @@ export class Accounts {
             {headers: RequestHelper.headers()}
         );
     }
-    public static getAccountLedgerEntry(params: URLSearchParams): Observable<object>{
+
+    public static getAllTrades(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
-        uri.append('requestType', 'getAccountLedgerEntry');
+        uri.append('requestType', 'getAllTrades');
         // Send the POST request to remote/local node
         return RequestHelper.httpClient().post<object>(
             RequestHelper.apiUrl(), 
@@ -209,10 +130,11 @@ export class Accounts {
             {headers: RequestHelper.headers()}
         );
     }
-    public static getAccountLessors(params: URLSearchParams): Observable<object>{
+    
+    public static getAskOrder(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
-        uri.append('requestType', 'getAccountLessors');
+        uri.append('requestType', 'getAskOrder');
         // Send the POST request to remote/local node
         return RequestHelper.httpClient().post<object>(
             RequestHelper.apiUrl(), 
@@ -220,10 +142,11 @@ export class Accounts {
             {headers: RequestHelper.headers()}
         );
     }
-    public static getAccountPhasedTransactionCount(params: URLSearchParams): Observable<object>{
+
+    public static getAskOrderIds(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
-        uri.append('requestType', 'getAccountPhasedTransactionCount');
+        uri.append('requestType', 'getAskOrderIds');
         // Send the POST request to remote/local node
         return RequestHelper.httpClient().post<object>(
             RequestHelper.apiUrl(), 
@@ -231,10 +154,11 @@ export class Accounts {
             {headers: RequestHelper.headers()}
         );
     }
-    public static getAccountPhasedTransactions(params: URLSearchParams): Observable<object>{
+    
+    public static getAskOrders(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
-        uri.append('requestType', 'getAccountPhasedTransactions');
+        uri.append('requestType', 'getAskOrders');
         // Send the POST request to remote/local node
         return RequestHelper.httpClient().post<object>(
             RequestHelper.apiUrl(), 
@@ -242,10 +166,11 @@ export class Accounts {
             {headers: RequestHelper.headers()}
         );
     }
-    public static getAccountProperties(params: URLSearchParams): Observable<object>{
+
+    public static getAsset(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
-        uri.append('requestType', 'getAccountProperties');
+        uri.append('requestType', 'getAsset');
         // Send the POST request to remote/local node
         return RequestHelper.httpClient().post<object>(
             RequestHelper.apiUrl(), 
@@ -253,10 +178,11 @@ export class Accounts {
             {headers: RequestHelper.headers()}
         );
     }
-    public static getAccountPublicKey(params: URLSearchParams): Observable<object>{
+
+    public static getAssetAccountCount(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
-        uri.append('requestType', 'getAccountPublicKey');
+        uri.append('requestType', 'getAssetAccountCount');
         // Send the POST request to remote/local node
         return RequestHelper.httpClient().post<object>(
             RequestHelper.apiUrl(), 
@@ -264,6 +190,79 @@ export class Accounts {
             {headers: RequestHelper.headers()}
         );
     }
+
+    public static getAssetAccounts(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getAssetAccounts');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
+    public static getAssetDividends(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getAssetDividends');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
+    public static getAssetHistory(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getAssetHistory');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
+    public static getAssetIds(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getAssetIds');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
+    public static getAssetProperties(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getAssetProperties');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
+    public static getAssets(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getAssets');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
     public static getAssetsByIssuer(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
@@ -275,219 +274,11 @@ export class Accounts {
             {headers: RequestHelper.headers()}
         );
     }
-    public static getBalance(params: URLSearchParams): Observable<object>{
+
+    public static getAssetTransfers(params: URLSearchParams): Observable<object>{
         // Append params with requstType
         const uri = params;
-        uri.append('requestType', 'getBalance');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static getBalances(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getBalances');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static getBlockchainTransactions(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getBlockchainTransactions');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static getContractReferences(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getContractReferences');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static getCurrenciesByIssuer(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getCurrenciesByIssuer');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static getEffectiveBalance(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getEffectiveBalance');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static getFundingMonitor(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getFundingMonitor');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static getGuaranteedBalance(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getGuaranteedBalance');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static getPolls(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getPolls');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static getUnconfirmedTransactionIds(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getUnconfirmedTransactionIds');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static getUnconfirmedTransactions(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getUnconfirmedTransactions');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static getVoterPhasedTransactions(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'getVoterPhasedTransactions');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static rsConvert(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'rsConvert');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static searchAccounts(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'searchAccounts');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static sendMoney(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'sendMoney');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static setAccountInfo(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'setAccountInfo');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static setAccountProperty(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'setAccountProperty');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static setContractReference(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'setContractReference');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static startFundingMonitor(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'startFundingMonitor');
-        // Send the POST request to remote/local node
-        return RequestHelper.httpClient().post<object>(
-            RequestHelper.apiUrl(), 
-            uri.toString(), 
-            {headers: RequestHelper.headers()}
-        );
-    }
-    public static stopFundingMonitor(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
-        const uri = params;
-        uri.append('requestType', 'stopFundingMonitor');
+        uri.append('requestType', 'getAssetTransfers');
         // Send the POST request to remote/local node
         return RequestHelper.httpClient().post<object>(
             RequestHelper.apiUrl(), 
@@ -496,4 +287,147 @@ export class Accounts {
         );
     }
 
+    public static getBidOrder(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getBidOrder');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
+    public static getBidOrderIds(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getBidOrderIds');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
+    public static getBidOrders(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getBidOrders');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
+    public static getExpectedAskOrders(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getExpectedAskOrders');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
+    public static getExpectedAssetDeletes(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getExpectedAssetDeletes');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
+    public static getExpectedAssetTransfers(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getExpectedAssetTransfers');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
+    public static getExpectedBidOrders(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getExpectedBidOrders');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
+    public static getExpectedOrderCancellations(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getExpectedOrderCancellations');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
+    public static getLastTrades(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getLastTrades');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
+    public static getOrderTrades(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getOrderTrades');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
+    public static getPhasingAssetControl(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getPhasingAssetControl');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
+
+    public static getTrades(params: URLSearchParams): Observable<object>{
+        // Append params with requstType
+        const uri = params;
+        uri.append('requestType', 'getTrades');
+        // Send the POST request to remote/local node
+        return RequestHelper.httpClient().post<object>(
+            RequestHelper.apiUrl(), 
+            uri.toString(), 
+            {headers: RequestHelper.headers()}
+        );
+    }
 }

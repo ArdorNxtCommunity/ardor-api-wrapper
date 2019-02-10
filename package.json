@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "NPM package for interaction with ardor node",
   "main": "index.js",
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
@@ -26,9 +28,11 @@
   "bugs": {
     "url": "https://github.com/ArdorNxtCommunity/ardorJS/issues"
   },
-  "homepage": "https://github.com/ArdorNxtCommunity/ardorJS#readme",  
+  "homepage": "https://github.com/ArdorNxtCommunity/ardorJS#readme",
   "devDependencies": {
+    "@angular/common": "^7.2.4",
     "prettier": "^1.16.4",
+    "rxjs": "^6.4.0",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.3.3"
