@@ -6,8 +6,9 @@
  * found in the LICENSE file at https://github.com/ArdorNxtCommunity/ardorJS/blob/master/LICENSE
  */
 
-export class Config {
+import * as Conf from '../config/config.json';
 
+export class Config {
 
     public static setNodeUrl(url:string){
         this.settedNode = url;
@@ -17,11 +18,17 @@ export class Config {
         if(this.settedNode){
             return this.settedNode;
         }
+        
         if(this.isTestNet()){
-            return '';
+            const nbPeers = Conf.defaultTestnetPeers.length;
+            const selected = Conf.defaultTestnetPeers[Math.floor(Math.random()*nbPeers)];
+            this.settedNode = selected
         }else{
-            return '';
+            const nbPeers = Conf.defaultPeers.length;
+            const selected = Conf.defaultTestnetPeers[Math.floor(Math.random()*nbPeers)];
+            this.settedNode = selected
         }
+        return this.settedNode;
     }
 
     public static isTestNet(): boolean{

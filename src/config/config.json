@@ -1,0 +1,12 @@
+{
+    "defaultPeers": [
+        "https://ardor.tools/ardor/",
+        "https://enricoip.no-ip.biz:27876/",
+        "https://ardortools.com/ardor/"
+    ],
+    "defaultTestnetPeers": [
+        "https://testardor.jelurida.com/",
+        "https://enricoip.no-ip.biz:26877/",
+        "https://ardortools.com/ardorTest/"
+    ]
+}

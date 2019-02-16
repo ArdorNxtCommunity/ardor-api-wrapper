@@ -14,13 +14,13 @@ export class RequestHelper {
 
     public static headers(): HttpHeaders{
         if(!this.h){
-            this.h = new HttpHeaders({});
+            this.h = new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'});
         }
         return this.h;
     }
 
     public static apiUrl(): string {
-        return Config.getNodeUrl();
+        return Config.getNodeUrl() + "test";
     }
 
     public static httpClient(): HttpClient {
