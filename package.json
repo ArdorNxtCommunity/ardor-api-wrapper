@@ -1,20 +1,28 @@
 {
-  "name": "ardorjs",
+  "name": "ardor-api-wrapper",
   "version": "1.0.0",
   "description": "NPM package for interaction with ardor node",
-  "main": "index.js",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.js",
   "files": [
-    "lib/**/*"
+    "dist/**/*"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "npm install",
     "build": "tsc",
+    "build-watch": "tsc --watch",
+    "test-only": "mocha dist/test/",
+    "pretest": "npm run build",
+    "test": "npm run test-only",
+    "clean": "shx rm -rf node_modules/ dist/ docs/",
+    "typedoc": "typedoc --out ./docs --mode modules --tsconfig ./tsconfig.json ./dev/src/",
+    "posttypedoc": "shx cp .nojekyll docs/.nojekyll",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ArdorNxtCommunity/ardorJS.git"
+    "url": "git+https://github.com/ArdorNxtCommunity/ardor-api-wrapper.git"
   },
   "keywords": [
     "ardor",
@@ -26,16 +34,23 @@
   "author": "ArdorNxtCommunity",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ArdorNxtCommunity/ardorJS/issues"
+    "url": "https://github.com/ArdorNxtCommunity/ardor-api-wrapper/issues"
   },
-  "homepage": "https://github.com/ArdorNxtCommunity/ardorJS#readme",
+  "homepage": "https://github.com/ArdorNxtCommunity/ardor-api-wrapper#readme",
   "devDependencies": {
-    "@angular/common": "^7.2.4",
-    "@angular/core": "^7.2.4",
+    "@types/mocha": "^5.2.6",
+    "mocha": "^5.2.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.16.4",
     "rxjs": "^6.4.0",
+    "shx": "^0.3.2",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.18.0",
+    "typedoc": "^0.14.2",
     "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "@angular/common": "^7.2.5",
+    "@angular/core": "^7.2.5"
   }
 }
