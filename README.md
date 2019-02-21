@@ -21,17 +21,32 @@ As any NPM package, please use the following command in your web application pro
 The package will also install its required depedencies.
 
 ### Usage
-Depending on the Front-End 
+The usage may depend on the Front-End framework you're using, but you can keep in mind that we will mainly maintain the use of Observables as return values. 
+
+RoadMap
+-------
+Below is the development roadmap for this package. This map may be adjusted according to feedbacks from users and community members.
+
+- Done
+  - Initialization of the package
+  - Automatic build (using TravisCI) and deployment process to NPM
+
+- In progress:
+  - Remove dependency to Angular HttpClient and use native promises then transform them to Observable
+  - Add references to the documentation of the API calls
+  - Add tests for each API call
+  - Add mandatory parameters in the input parameters for each call
+  - Enhance return values (by using model and retun typing)
+  - Add usage example for different Front-End frameworks
+  - Add local signing of the transactions and avoid sending passphrase to the remote node
+  - Add local storage support to handle in-app encryption of the passphrase for future uses
+
 
 Technical details
 -----------------
 This section deals with some technical choices made during the developement of this package.
 
-### Observables as return values
-
-### Depedency to @angular/common/http
-
-### Usage in Front-End frameworks
+*In Progress*
 
 How to contribute?
 -------------------

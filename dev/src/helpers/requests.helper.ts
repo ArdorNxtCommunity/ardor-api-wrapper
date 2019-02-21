@@ -20,7 +20,7 @@ export class RequestHelper {
     }
 
     public static apiUrl(): string {
-        return Config.getNodeUrl() + "test";
+        return Config.getNodeUrl() + "nxt";
     }
 
     public static httpClient(): HttpClient {
