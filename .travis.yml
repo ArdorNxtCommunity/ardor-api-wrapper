@@ -1,5 +1,9 @@
 language: nodejs
 
+branches:
+  only:
+    - master
+
 before_script:
   - npm run setup
   - npm run build
