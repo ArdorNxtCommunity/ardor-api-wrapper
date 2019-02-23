@@ -7,11 +7,9 @@ branches:
 before_script:
   - npm run setup
   - npm run build
-
-script:
   - npm run test-only
 
-after_success:
+script:
   - npm pack
 
 before_deploy:
@@ -22,12 +20,6 @@ before_deploy:
   - git tag "$TRAVIS_TAG" "$TRAVIS_COMMIT"
 
 deploy:
-  - provider: pages
-    skip_cleanup: true
-    local_dir: docs/
-    github_token: $GITHUB_TOKEN
-    on:
-      tags: true
   - provider: releases
     api_key: $GITHUB_TOKEN
     file_glob: true
