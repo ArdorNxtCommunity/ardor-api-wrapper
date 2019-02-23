@@ -16,9 +16,11 @@ after_success:
   - npm pack
 
 before_deploy:
-  - git config --local user.name "aajajim"
-  - git config --local user.email "mohammed.aajaji.freelance@gmail.com"
-  - export TRAVIS_TAG=$(git describe --tags --exact-match HEAD)
+- export TRAVIS_TAG="1.0.$TRAVIS_BUILD_NUMBER"
+- echo "$TRAVIS_TAG" "$TRAVIS_COMMIT"
+- git config --local user.name "aajajim"
+- git config --local user.email "mohammed.aajaji.freelance@gmail.com"
+- git tag "$TRAVIS_TAG" "$TRAVIS_COMMIT"
 
 deploy:
   - provider: pages
