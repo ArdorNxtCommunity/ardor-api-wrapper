@@ -12,7 +12,7 @@ import { RequestHelper } from '../helpers/requests.helper';
 export class MonetarySystem {
     
     public static canDeleteCurrency(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'canDeleteCurrency');
         // Send the POST request to remote/local node
@@ -23,7 +23,7 @@ export class MonetarySystem {
         );
     }
     public static currencyBuy(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'currencyBuy');
         // Send the POST request to remote/local node
@@ -34,7 +34,7 @@ export class MonetarySystem {
         );
     }
     public static currencyMint(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'currencyMint');
         // Send the POST request to remote/local node
@@ -45,7 +45,7 @@ export class MonetarySystem {
         );
     }
     public static currencyReserveClaim(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'currencyReserveClaim');
         // Send the POST request to remote/local node
@@ -56,7 +56,7 @@ export class MonetarySystem {
         );
     }
     public static currencyReserveIncrease(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'currencyReserveIncrease');
         // Send the POST request to remote/local node
@@ -67,7 +67,7 @@ export class MonetarySystem {
         );
     }
     public static currencySell(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'currencySell');
         // Send the POST request to remote/local node
@@ -78,7 +78,7 @@ export class MonetarySystem {
         );
     }
     public static deleteCurrency(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'deleteCurrency');
         // Send the POST request to remote/local node
@@ -89,7 +89,7 @@ export class MonetarySystem {
         );
     }
     public static getAccountCurrencies(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getAccountCurrencies');
         // Send the POST request to remote/local node
@@ -100,7 +100,7 @@ export class MonetarySystem {
         );
     }
     public static getAccountCurrencyCount(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getAccountCurrencyCount');
         // Send the POST request to remote/local node
@@ -111,7 +111,7 @@ export class MonetarySystem {
         );
     }
     public static getAccountExchangeRequests(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getAccountExchangeRequests');
         // Send the POST request to remote/local node
@@ -122,7 +122,7 @@ export class MonetarySystem {
         );
     }
     public static getAllCurrencies(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getAllCurrencies');
         // Send the POST request to remote/local node
@@ -133,7 +133,7 @@ export class MonetarySystem {
         );
     }
     public static getAllExchanges(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getAllExchanges');
         // Send the POST request to remote/local node
@@ -144,7 +144,7 @@ export class MonetarySystem {
         );
     }
     public static getAvailableToBuy(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getAvailableToBuy');
         // Send the POST request to remote/local node
@@ -155,7 +155,7 @@ export class MonetarySystem {
         );
     }
     public static getAvailableToSell(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getAvailableToSell');
         // Send the POST request to remote/local node
@@ -166,7 +166,7 @@ export class MonetarySystem {
         );
     }
     public static getBuyOffers(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getBuyOffers');
         // Send the POST request to remote/local node
@@ -177,7 +177,7 @@ export class MonetarySystem {
         );
     }
     public static getCurrencies(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getCurrencies');
         // Send the POST request to remote/local node
@@ -188,7 +188,7 @@ export class MonetarySystem {
         );
     }
     public static getCurrenciesByIssuer(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getCurrenciesByIssuer');
         // Send the POST request to remote/local node
@@ -199,7 +199,7 @@ export class MonetarySystem {
         );
     }
     public static getCurrency(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getCurrency');
         // Send the POST request to remote/local node
@@ -210,7 +210,7 @@ export class MonetarySystem {
         );
     }
     public static getCurrencyAccountCount(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getCurrencyAccountCount');
         // Send the POST request to remote/local node
@@ -221,7 +221,7 @@ export class MonetarySystem {
         );
     }
     public static getCurrencyAccounts(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getCurrencyAccounts');
         // Send the POST request to remote/local node
@@ -232,7 +232,7 @@ export class MonetarySystem {
         );
     }
     public static getCurrencyFounders(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getCurrencyFounders');
         // Send the POST request to remote/local node
@@ -243,7 +243,7 @@ export class MonetarySystem {
         );
     }
     public static getCurrencyIds(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getCurrencyIds');
         // Send the POST request to remote/local node
@@ -254,7 +254,7 @@ export class MonetarySystem {
         );
     }
     public static getCurrencyTransfers(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getCurrencyTransfers');
         // Send the POST request to remote/local node
@@ -265,7 +265,7 @@ export class MonetarySystem {
         );
     }
     public static getExchanges(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getExchanges');
         // Send the POST request to remote/local node
@@ -276,7 +276,7 @@ export class MonetarySystem {
         );
     }
     public static getExchangesByExchangeRequest(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getExchangesByExchangeRequest');
         // Send the POST request to remote/local node
@@ -287,7 +287,7 @@ export class MonetarySystem {
         );
     }
     public static getExchangesByOffer(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getExchangesByOffer');
         // Send the POST request to remote/local node
@@ -298,7 +298,7 @@ export class MonetarySystem {
         );
     }
     public static getExpectedBuyOffers(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getExpectedBuyOffers');
         // Send the POST request to remote/local node
@@ -309,7 +309,7 @@ export class MonetarySystem {
         );
     }
     public static getExpectedCurrencyTransfers(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getExpectedCurrencyTransfers');
         // Send the POST request to remote/local node
@@ -320,7 +320,7 @@ export class MonetarySystem {
         );
     }
     public static getExpectedExchangeRequests(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getExpectedExchangeRequests');
         // Send the POST request to remote/local node
@@ -331,7 +331,7 @@ export class MonetarySystem {
         );
     }
     public static getExpectedSellOffers(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getExpectedSellOffers');
         // Send the POST request to remote/local node
@@ -342,7 +342,7 @@ export class MonetarySystem {
         );
     }
     public static getLastExchanges(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getLastExchanges');
         // Send the POST request to remote/local node
@@ -353,7 +353,7 @@ export class MonetarySystem {
         );
     }
     public static getMintingTarget(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getMintingTarget');
         // Send the POST request to remote/local node
@@ -364,7 +364,7 @@ export class MonetarySystem {
         );
     }
     public static getOffer(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getOffer');
         // Send the POST request to remote/local node
@@ -375,7 +375,7 @@ export class MonetarySystem {
         );
     }
     public static getSellOffers(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'getSellOffers');
         // Send the POST request to remote/local node
@@ -386,7 +386,7 @@ export class MonetarySystem {
         );
     }
     public static issueCurrency(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'issueCurrency');
         // Send the POST request to remote/local node
@@ -397,7 +397,7 @@ export class MonetarySystem {
         );
     }
     public static publishExchangeOffer(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'publishExchangeOffer');
         // Send the POST request to remote/local node
@@ -408,7 +408,7 @@ export class MonetarySystem {
         );
     }
     public static transferCurrency(params: URLSearchParams): Observable<object>{
-        // Append params with requstType
+        // Append params with requestType
         const uri = params;
         uri.append('requestType', 'transferCurrency');
         // Send the POST request to remote/local node
